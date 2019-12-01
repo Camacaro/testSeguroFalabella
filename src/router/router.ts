@@ -1,15 +1,9 @@
 
 import { Router, Request, Response} from 'express';
+import ProductController from '../controllers/products';
 
 const router = Router();
 
-router.get('/heroes', (req:Request, res:Response)=>{
-
-	res.json({
-		ok:true,
-		mensaje: 'Todo esta bien!'
-	});
-
-});
+router.get('/test', ProductController.test);
 
 export default router;
