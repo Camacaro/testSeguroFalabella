@@ -1,17 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const PRODUCTOS = [
-    {
-        nombre: 'Cobertura',
-        sellIn: 10,
-        price: 20
-    }
-];
+const productos_1 = require("../datos/productos");
 const ProductController = {
     test: function (req, res) {
         return res.json({
             ok: true,
-            mensaje: 'Todo esta bien!'
+            mensaje: 'Todo esta bien!',
+            PRODUCTOS: productos_1.PRODUCTOS
         });
     },
 };

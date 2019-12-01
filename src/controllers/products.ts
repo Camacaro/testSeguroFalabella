@@ -1,14 +1,6 @@
 
 import { Request, Response} from 'express';
-import { IProducto } from '../interfaces';
-
-const PRODUCTOS: IProducto[] = [
-    { 
-        nombre: 'Cobertura',
-        sellIn: 10,
-        price: 20
-    }
-]
+import { PRODUCTOS } from '../datos/productos'
 
 const ProductController = { 
 
@@ -16,7 +8,8 @@ const ProductController = {
 
         return res.json({
             ok:true,
-            mensaje: 'Todo esta bien!'
+            mensaje: 'Todo esta bien!',
+            PRODUCTOS
         });
     },
 
