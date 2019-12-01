@@ -7,4 +7,5 @@ const express_1 = require("express");
 const products_1 = __importDefault(require("../controllers/products"));
 const router = express_1.Router();
 router.get('/test', products_1.default.test);
+router.get('/productos', products_1.default.lista);
 exports.default = router;
