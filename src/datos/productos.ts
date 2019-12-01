@@ -17,12 +17,12 @@ export const PRODUCTOS: IProducto[] = [
         price: 7
     },
     { 
-        nombre: 'Mega  cobertura',
+        nombre: 'Mega cobertura',
         sellIn: 0,
         price: 80
     },
     { 
-        nombre: 'Mega  cobertura',
+        nombre: 'Mega cobertura',
         sellIn: -1,
         price: 80
     },
