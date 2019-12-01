@@ -1,0 +1,10 @@
+1. npm init
+2. tsc --init
+3. en el archivo tsconfig.json descomentar "outDir": "./",  esto es para el directorio donde quiero el producto final
+4. en consola porner "tsc" me genera los archivos ts a js y los pone en la carpeta que especifique en ourDir
+
+5.  npm install @types/express -- save-dev, este paquete sirve para saber las funciones y que poseee express en ts, es como una ayuda
+
+6.npm install copyfiles -g (sirve para copiar todos los archivos al outDir cuando se ejecuta el tsc)
+
+7. npm install mysql (este es para la comunicacion con mysql, para mas info:https://github.com/mysqljs/mysql)
