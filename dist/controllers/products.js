@@ -16,9 +16,11 @@ const ProductController = {
         });
     },
     agregar: function (req, res) {
-        return res.status(200).json({
+        productos_1.PRODUCTOS.unshift(req.body.newProduct);
+        return res.status(201).json({
             ok: true,
-            producto: req.body
+            message: "Producto agregado",
+            producto: req.body.newProduct
         });
     },
 };

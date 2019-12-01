@@ -10,7 +10,7 @@ exports.RegistrarProducto = (req, res, next) => {
             error: 'Parametros incompletos'
         });
     }
-    let newProduct = {
+    const newProduct = {
         nombre: body.nombre,
         sellIn: body.sellIn,
         price: body.price

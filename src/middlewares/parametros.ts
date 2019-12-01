@@ -15,7 +15,7 @@ export const RegistrarProducto = ( req:Request, res:Response, next:NextFunction 
         });
     }
 
-    let newProduct = {
+    const newProduct = {
 		nombre:  body.nombre,
 		sellIn : body.sellIn,
         price:  body.price

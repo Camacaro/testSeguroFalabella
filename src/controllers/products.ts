@@ -23,9 +23,12 @@ const ProductController = {
 
     agregar: function( req: Request, res: Response) {
 
-        return res.status(200).json({
+        PRODUCTOS.unshift( req.body.newProduct );
+
+        return res.status(201).json({
             ok:true,
-            producto: req.body 
+            message: "Producto agregado",
+            producto: req.body.newProduct 
         });
     },
 
