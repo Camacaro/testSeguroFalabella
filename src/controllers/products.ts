@@ -13,11 +13,19 @@ const ProductController = {
         });
     },
 
-    lista: function( req: Request, res: Response) {
+    listar: function( req: Request, res: Response) {
 
         return res.status(200).json({
             ok:true,
             productos: PRODUCTOS
+        });
+    },
+
+    agregar: function( req: Request, res: Response) {
+
+        return res.status(200).json({
+            ok:true,
+            producto: req.body 
         });
     },
 

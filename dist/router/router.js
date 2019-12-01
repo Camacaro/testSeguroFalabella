@@ -5,7 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const products_1 = __importDefault(require("../controllers/products"));
+const parametros_1 = require("../middlewares/parametros");
 const router = express_1.Router();
 router.get('/test', products_1.default.test);
-router.get('/productos', products_1.default.lista);
+router.get('/productos', products_1.default.listar);
+router.post('/productos', parametros_1.RegistrarProducto, products_1.default.agregar);
 exports.default = router;
