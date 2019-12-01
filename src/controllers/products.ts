@@ -32,6 +32,38 @@ const ProductController = {
         });
     },
 
+    evaluateproducts: function( req: Request, res: Response) {
+
+        const days = req.params.days;
+
+        PRODUCTOS.map( producto => {
+
+            // Full cobertura
+
+            producto.sellIn = producto.sellIn - days;
+
+            if ( producto.sellIn < 0 ) {
+
+                producto.price = producto.price - (days * 2);    
+
+            } else {
+
+                producto.price = producto.price - days;
+            }
+
+            if( producto.price < 0 ) {
+                producto.price = 0;
+            }
+
+        });
+
+         return res.json({
+            ok:true,
+            mensaje: 'Todo esta bien!',
+            days
+        });
+    },
+
 
 }   
 

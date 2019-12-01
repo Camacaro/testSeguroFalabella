@@ -6,7 +6,8 @@ import { RegistrarProducto } from '../middlewares/parametros';
 const router = Router();
 
 router.get('/test', ProductController.test);
-router.get('/productos', ProductController.listar);
-router.post('/productos', RegistrarProducto, ProductController.agregar);
+router.get('/products', ProductController.listar);
+router.post('/products', RegistrarProducto, ProductController.agregar);
+router.get('/evaluateproducts/:days', ProductController.evaluateproducts);
 
 export default router;

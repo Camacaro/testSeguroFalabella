@@ -5,6 +5,9 @@ export const RegistrarProducto = ( req:Request, res:Response, next:NextFunction 
 
     const body = req.body;
 
+    const productosValidos = [ 'Cobertura', 'Full cobertura', 'Baja cobertura', 
+            'Mega cobertura', 'Full cobertura super duper', 'Super avance' ];
+
     if( !body.nombre||
         !body.sellIn ||
         !body.price ){
@@ -12,6 +15,14 @@ export const RegistrarProducto = ( req:Request, res:Response, next:NextFunction 
         return res.status(401).json({
             ok:false,
             error: 'Parametros incompletos'
+        });
+    }
+
+    if ( !productosValidos.find( pro => pro == body.nombre ) ) {
+        return res.status(401).json({
+            ok:false,
+            error: 'Producto no valido',
+            productosValidos
         });
     }
 
